@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             Title="Safe Area"
+             ios:Page.PrefersStatusBarHidden="True"
+             ios:Page.UseSafeArea="true"
+             ios:Page.PreferredStatusBarUpdateAnimation="Fade"
+             Padding="0"
+             x:Class="VirusTrackingApp.MainPage">
+    <AbsoluteLayout>
+        <yummy:PancakeView AbsoluteLayout.LayoutBounds="0,0,1,1"
+                           AbsoluteLayout.LayoutFlags="All"
+                           BackgroundGradientAngle="90">
+            <yummy:PancakeView.BackgroundGradientStops>
+                <yummy:GradientStopCollection>
+                    <yummy:GradientStop Color="#30767F" Offset="1" />
+                    <yummy:GradientStop Color="#3F8C99" Offset="0" />
+                </yummy:GradientStopCollection>
+            </yummy:PancakeView.BackgroundGradientStops>
+        </yummy:PancakeView>
+        <StackLayout AbsoluteLayout.LayoutFlags="All"
+                     AbsoluteLayout.LayoutBounds="0,0,1,1"
+                     CompressedLayout.IsHeadless="True">
+            <StackLayout Margin="{DynamicResource SafeAreaInsets}">
+                <Label Text="Your History"
+                       Margin="30, 20, 30, 0"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       FontSize="Title"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Start" />
+                <StackLayout Orientation="Horizontal"
+                             Margin="30, 10, 30, 0"
+                             Spacing="40">
+                    <Label TextColor="White"
+                           Text="Month"
+                           Opacity="0.5"
+                           FontSize="Header"
+                           FontAttributes="Bold" />
+                    <Label TextColor="White"
+                           Text="Week"
+                           FontSize="Header"
+                           FontAttributes="Bold" />
+                    <Label TextColor="White"
+                           Opacity="0.5"
+                           Text="Day"
+                           FontSize="Header"
+                           FontAttributes="Bold" />
+                </StackLayout>
+            </StackLayout>
+            <yummy:PancakeView BackgroundColor="White"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="FillAndExpand"
+                               CornerRadius="40">
+                <StackLayout Padding="40">
+                    <StackLayout Orientation="Horizontal"
+                                 Spacing="30">
+                        <StackLayout Orientation="Horizontal">
+                            <Ellipse Fill="#2F737C"
+                                     HeightRequest="12"
+                                     Aspect="Uniform"
+                                     WidthRequest="12" />
+                            <Label Text="Low risk"
+                                   FontSize="Small"
+                                   HorizontalOptions="Start" />
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <Ellipse Fill="#F1CF48"
+                                     HeightRequest="12"
+                                     Aspect="Uniform"
+                                     WidthRequest="12" />
+                            <Label Text="Medium risk"
+                                   FontSize="Small"
+                                   HorizontalOptions="Start" />
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <Ellipse Fill="#EC716F"
+                                     HeightRequest="12"
+                                     Aspect="Uniform"
+                                     WidthRequest="12" />
+                            <Label Text="High risk"
+                                   FontSize="Small"
+                                   HorizontalOptions="Start" />
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Spacing="30">
+                        <AbsoluteLayout Margin="0, 20">
+                            <yummy:PancakeView AbsoluteLayout.LayoutFlags="PositionProportional"
+                                               AbsoluteLayout.LayoutBounds="0,0,12,300"
+                                               BackgroundColor="#FAF9FB"
+                                               VerticalOptions="Start"
+                                               CornerRadius="6"
+                                               HeightRequest="200"
+                                               WidthRequest="12" />
+                            <yummy:PancakeView AbsoluteLayout.LayoutFlags="PositionProportional"
+                                               AbsoluteLayout.LayoutBounds="0,1,12,100"
+                                               CornerRadius="6">
+                                <yummy:PancakeView.BackgroundGradientStops>
+                                    <yummy:GradientStopCollection>
+                                        <yummy:GradientStop Color="#2F737C" Offset="1" />
+                                        <yummy:GradientStop Color="#F1CF48" Offset="0" />
+                                    </yummy:GradientStopCollection>
+                                </yummy:PancakeView.BackgroundGradientStops>
+                            </yummy:PancakeView>
+                        </AbsoluteLayout>
+
+                        <AbsoluteLayout Margin="0, 20">
+                            <yummy:PancakeView AbsoluteLayout.LayoutFlags="PositionProportional"
+                                               AbsoluteLayout.LayoutBounds="0,0,12,300"
+                                               BackgroundColor="#FAF9FB"
+                                               VerticalOptions="Start"
+                                               CornerRadius="6"
+                                               HeightRequest="200"
+                                               WidthRequest="12" />
+                            <yummy:PancakeView AbsoluteLayout.LayoutFlags="PositionProportional"
+                                               AbsoluteLayout.LayoutBounds="0,1,12,150"
+                                               CornerRadius="6">
+                                <yummy:PancakeView.BackgroundGradientStops>
+                                    <yummy:GradientStopCollection>
+                                        <yummy:GradientStop Color="#2F737C" Offset="1" />
+                                        <yummy:GradientStop Color="#F1CF48" Offset="0" />
+                                    </yummy:GradientStopCollection>
+                                </yummy:PancakeView.BackgroundGradientStops>
+                            </yummy:PancakeView>
+                        </AbsoluteLayout>
+
+                        <AbsoluteLayout Margin="0, 20">
+                            <yummy:PancakeView AbsoluteLayout.LayoutFlags="PositionProportional"
+                                               AbsoluteLayout.LayoutBounds="0,0,12,300"
+                                               BackgroundColor="#FAF9FB"
+                                               VerticalOptions="Start"
+                                               CornerRadius="6"
+                                               HeightRequest="200"
+                                               WidthRequest="12" />
+                            <yummy:PancakeView AbsoluteLayout.LayoutFlags="PositionProportional"
+                                               AbsoluteLayout.LayoutBounds="0,1,12,300"
+                                               CornerRadius="6">
+                                <yummy:PancakeView.BackgroundGradientStops>
+                                    <yummy:GradientStopCollection>
+                                        <yummy:GradientStop Color="#2F737C" Offset="1" />
+                                        <yummy:GradientStop Color="#F1CF48" Offset="0.5" />
+                                        <yummy:GradientStop Color="#EC716F" Offset="0" />
+                                    </yummy:GradientStopCollection>
+                                </yummy:PancakeView.BackgroundGradientStops>
+                            </yummy:PancakeView>
+                        </AbsoluteLayout>
+
+                        <AbsoluteLayout Margin="0, 20">
+                            <yummy:PancakeView AbsoluteLayout.LayoutFlags="PositionProportional"
+                                               AbsoluteLayout.LayoutBounds="0,0,12,300"
+                                               BackgroundColor="#FAF9FB"
+                                               VerticalOptions="Start"
+                                               CornerRadius="6"
+                                               HeightRequest="200"
+                                               WidthRequest="12" />
+                            <yummy:PancakeView AbsoluteLayout.LayoutFlags="PositionProportional"
+                                               AbsoluteLayout.LayoutBounds="0,1,12,80"
+                                               CornerRadius="6">
+                                <yummy:PancakeView.BackgroundGradientStops>
+                                    <yummy:GradientStopCollection>
+                                        <yummy:GradientStop Color="#2F737C" Offset="1" />
+                                        <yummy:GradientStop Color="#F1CF48" Offset="0" />
+                                    </yummy:GradientStopCollection>
+                                </yummy:PancakeView.BackgroundGradientStops>
+                            </yummy:PancakeView>
+                        </AbsoluteLayout>
+                    </StackLayout>
+
+                    <yummy:PancakeView BackgroundColor="#F3F3F3"
+                                       CornerRadius="15"
+                                       HeightRequest="120">
+                        <yummy:PancakeView.Shadow>
+                            <yummy:DropShadow Color="#16363B"
+                                              Offset="0, 10"
+                                              BlurRadius="20"
+                                              Opacity="0.1" />
+                        </yummy:PancakeView.Shadow>
+                        <AbsoluteLayout>
+                            <Label AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                   AbsoluteLayout.LayoutFlags="All"
+                                   Text="Avoid Crowds to Prevent Illness Spread"
+                                   TextColor="#222222"
+                                   Margin="20" />
+                            <yummy:PancakeView BackgroundColor="#2F737C"
+                                               CornerRadius="40, 40, 0, 0"
+                                               AbsoluteLayout.LayoutFlags="PositionProportional"
+                                               AbsoluteLayout.LayoutBounds="1,1,80,80" />
+                        </AbsoluteLayout>
+                    </yummy:PancakeView>
+                </StackLayout>
+            </yummy:PancakeView>
+        </StackLayout>
+    </AbsoluteLayout>
+</ContentPage>
